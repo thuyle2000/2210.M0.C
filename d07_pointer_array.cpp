@@ -35,7 +35,7 @@ int main()
     }
 
     printf("\n Day so (pointer - reverse): ");
-    pa = &a[4];
+    pa = &a[4]; //pa chua dia chi cua pt cuoi trong mang a[]
     for (int i = 0; i < 5; i++)
     {
         printf("%4d ", *(pa)--);
