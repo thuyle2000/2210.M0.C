@@ -6,20 +6,28 @@ int main(){
     system("cls");
 
     printf("*** Demo Pointer *** \n");
-    int a;
-    float b;
-    char c;
+    int a; 
+    int *pa;
+    pa = &a;
+
+    float b; 
+    float *pb;
+    pb = &b;
+
+    char c;  
+    char *pc = &c;
+
     char hoten[31];
 
     printf(" >> nhap 1 so nguyen : ");
-    scanf("%d", &a);
+    scanf("%d", pa); //scanf("%d", &a);
 
     printf(" >> nhap 1 so thuc : ");
-    scanf("%f", &b);
+    scanf("%f", pb); //scanf("%f", &b);
 
     fflush(stdin);
     printf(" >> nhap 1 ky tu bat ky : ");
-    scanf("%c", &c);
+    scanf("%c", pc); //scanf("%c", &c);
 
     fflush(stdin);
     printf(" >> nhap ho va ten cua ban: ");
