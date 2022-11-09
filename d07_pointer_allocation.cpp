@@ -17,6 +17,7 @@ int main(){
 
     // con tro p, chua dia chi vung nho dc cap phat co the chua n-so nguyen
     int *p = (int *) malloc(n * sizeof(int));
+    // int *p = (int *) calloc(n , sizeof(int));
 
     if(p != NULL){
         //yc cap phat bo nho thanh cong
@@ -53,6 +54,7 @@ int main(){
             printf(" %4d", *(p+i));     //printf(" %4d", p[i]);
         }
         
+        free(p);    // giai phong bo nho dc cap phat
     }
 
 }
