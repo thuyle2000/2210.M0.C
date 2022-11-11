@@ -4,7 +4,7 @@
 
 // demo giai phuong tinh bac 2, dang thuc ax2+ bx+c = 0
 
-int giaiPT2(int a, int b, int c, double x1, double x2); // khai bao ham
+int giaiPT2(int a, int b, int c, double *x1, double *x2); // khai bao ham
 int main()
 {
     system("cls");
@@ -19,7 +19,7 @@ int main()
     printf(" >> nhap he so c: ");
     scanf("%d", &c);
 
-    int kq = giaiPT2(a, b, c, x, y);
+    int kq = giaiPT2(a, b, c, &x, &y);
     switch (kq)
     {
     case -1:
@@ -47,7 +47,7 @@ int main()
                       1 : pt co 2 nghiem phan biet x1, x2
     tham so : co 3 tham so nguyen n (a, b, c)
 */
-int giaiPT2(int a, int b, int c, double x1, double x2)
+int giaiPT2(int a, int b, int c, double *x1, double *x2)
 {
     int r = 1;
     double delta = b * b - 4 * a * c;
@@ -57,13 +57,13 @@ int giaiPT2(int a, int b, int c, double x1, double x2)
     }
     else if (delta == 0)
     {
-        x1 = x2 = -b / (2.0 * a);
+       *x1 = *x2 = -b / (2.0 * a);
         return 0;
     }
     else
     {
-        x1 = (-b + sqrt(delta)) / (2 * a);
-        x2 = (-b - sqrt(delta)) / (2 * a);
+        *x1 = (-b + sqrt(delta)) / (2 * a);
+        *x2 = (-b - sqrt(delta)) / (2 * a);
         return 1;
     }
     return r;
