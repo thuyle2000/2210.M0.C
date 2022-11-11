@@ -3,6 +3,7 @@
 // chuong trinh c demo cach lap trinh ham co tham so va co gia tri tra ve
 
 long squarer(int n); // khai bao prototype cua ham: long squarer(int)
+char mess[31] = "Demo Function";    // bien toan cuc
 
 int main()
 {
@@ -26,6 +27,7 @@ int main()
 */
 long squarer(int n)
 {
+    printf("\n %s \n", mess);
     long r = n * n;
     return r;
 }
