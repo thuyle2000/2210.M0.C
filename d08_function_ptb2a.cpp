@@ -57,7 +57,7 @@ int giaiPT2(int a, int b, int c, double *x1, double *x2)
     }
     else if (delta == 0)
     {
-       *x1 = *x2 = -b / (2.0 * a);
+        *x1 = *x2 = -b / (2.0 * a);
         return 0;
     }
     else
